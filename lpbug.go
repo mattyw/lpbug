@@ -26,7 +26,7 @@ func main() {
 	number := re.FindString(bug)
 	url := fmt.Sprintf("http://launchpad.net/bugs/%s", number)
 
-	cmd := exec.Command("sensible-browser", url)
+	cmd := exec.Command("xdg-open", url)
 	err := cmd.Start()
 	if err != nil {
 		log.Fatal(err)
